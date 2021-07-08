@@ -1,0 +1,22 @@
+<p>Spring Controller Name Rule</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
+@Controller
+public class InvalidName {
+
+
+}
+
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+@Controller
+public class AController {
+}
+@RestController
+public class BController {
+}
+
+</pre>

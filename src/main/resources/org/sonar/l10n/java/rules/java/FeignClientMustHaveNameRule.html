@@ -1,0 +1,29 @@
+<p>Feign Client Must Have Name Rule</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+import org.springframework.cloud.openfeign.FeignClient;
+
+
+@FeignClient(
+  url = "${feign.client.config.payment-service.url:payment-service}",
+  primary = false)
+public interface PaymentServiceClient {
+
+
+}
+
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+import org.springframework.cloud.openfeign.FeignClient;
+
+
+@FeignClient(name = "payment-service",
+  url = "${feign.client.config.payment-service.url:payment-service}",
+  primary = false)
+public interface PaymentServiceClient {
+
+
+}
+
+</pre>

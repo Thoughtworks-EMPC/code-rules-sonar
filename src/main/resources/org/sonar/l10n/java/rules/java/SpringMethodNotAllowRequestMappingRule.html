@@ -1,0 +1,41 @@
+<p>Spring Method Not Allow Request Mapping Rule</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Controller;
+@Controller
+public class CustomerPageController{
+
+  @RequestMapping( "baseUrl")// Noncompliant
+  public void method1(){
+
+  }
+  @RequestMapping(value = "baseUrl")// Noncompliant
+  public void method2(){
+
+  }
+
+
+
+}
+
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Controller;
+@Controller
+public class CustomerPageController{
+
+  @GetMapping( "baseUrl")
+  public void method1(){
+
+  }
+  @GetMapping(value = "baseUrl")
+  public void method2(){
+
+  }
+}
+
+</pre>
+

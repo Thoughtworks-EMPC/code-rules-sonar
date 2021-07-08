@@ -1,0 +1,29 @@
+<p>Feign Client Package Path Rule</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+package xx.noclient;
+import org.springframework.cloud.openfeign.FeignClient;
+
+
+/*
+@FeignClient
+public interface ContractMoney {
+
+}
+*/
+
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+package xx.client;
+import org.springframework.cloud.openfeign.FeignClient;
+
+
+/*
+@FeignClient
+public interface ContractMoney {
+
+}
+*/
+
+</pre>

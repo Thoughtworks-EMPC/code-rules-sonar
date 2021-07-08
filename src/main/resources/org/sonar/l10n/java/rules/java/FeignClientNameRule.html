@@ -1,0 +1,19 @@
+<p>Feign Client Name Rule</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+/*
+@FeignClient
+public interface ContractMoney {
+
+}
+*/
+
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+@FeignClient
+public interface ContractMoneyClient {
+
+}
+
+</pre>
